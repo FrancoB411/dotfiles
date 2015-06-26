@@ -48,6 +48,9 @@ ZSH_CUSTOM=~/dotfiles/zsh_custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Set up Git autocomplete
+source ~/.git-completion.bash
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -93,7 +96,7 @@ chruby ruby-2.1.3
 
 export JAVA_HOME=`/usr/libexec/java_home`
 
-export EXPERIAN_ETC_HOSTS_TEST=true
+#export EXPERIAN_ETC_HOSTS_TEST=true
 
 
 eval "$(direnv hook zsh)"
@@ -107,6 +110,6 @@ export HOMEBREW_GITHUB_API_TOKEN=442c95a78656dec3eefe9e1d3b8fd2602749d43e
 
 source ~/dotfiles/tmuxinator.zsh
 
-
 # Set command-line editor to be vi
 set -o vi
+export PATH="/usr/local/sbin:$PATH"
