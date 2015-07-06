@@ -14,6 +14,7 @@ Something like this process should get new laptop working...
     git clone https://github.com/mikegrassotti/dotfiles.git
     ln -s dotfiles/vimrc .vimrc
     ln -s dotfiles/zshrc .zshrc
+    ln -s dotfiles/gitignore_global .gitignore_global
     # maybe more link ackrc, tmux, etc...
     cd dotfiles
 
