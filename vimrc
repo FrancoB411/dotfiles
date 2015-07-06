@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'rking/ag.vim'
   Plug 'mustache/vim-mustache-handlebars'
+  Plug 'mattn/emmet-vim'
 call plug#end()
 
 " use comma as leader key
