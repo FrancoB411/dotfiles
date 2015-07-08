@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'rking/ag.vim'
   Plug 'mustache/vim-mustache-handlebars'
   Plug 'mattn/emmet-vim'
+  Plug 'moll/vim-bbye'
 call plug#end()
 
 " use comma as leader key
@@ -78,5 +79,10 @@ set hlsearch
 " Press Space to turn off highlighting and clear any message already
 " displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" auto reload files that have changed on disk, not files that have been
+" deleted
+set autoread
+
 
 let g:mustache_abbreviations = 1
