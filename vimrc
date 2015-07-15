@@ -84,5 +84,5 @@ set hlsearch
 " deleted
 set autoread
 
-
+command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
