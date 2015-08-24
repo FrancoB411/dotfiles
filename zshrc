@@ -2,8 +2,6 @@
 echo "zshrc..."
 export ZSH=$HOME/.oh-my-zsh
 
-# Set CTRL+R to search command history
-bindkey "^R" history-incremental-search-backward
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -116,4 +114,8 @@ source ~/dotfiles/tmuxinator.zsh
 
 # Set command-line editor to be vi
 set -o vi
+
+# Set CTRL+R to search command history
+bindkey "^R" history-incremental-search-backward
+
 export PATH="/usr/local/sbin:$PATH"
