@@ -1,5 +1,4 @@
 " A minimal vimrc
-
 set nocompatible
 
 " AUTO-INSTALL VIM-PLUG
@@ -50,7 +49,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 " VIMCASTS...
 set ts=2 sts=2 sw=2 expandtab
 
-".vimrc
+" .vimrc
 nnoremap <leader>v :source $MYVIMRC<CR>
 
 " TAB MADNESS
@@ -86,3 +85,7 @@ set autoread
 
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
+
+" open netRW in current directory
+:map :E :Explore
+
