@@ -25,6 +25,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'mustache/vim-mustache-handlebars'
   Plug 'mattn/emmet-vim'
   Plug 'moll/vim-bbye'
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'groenewege/vim-less' 
 call plug#end()
 
 " use comma as leader key
