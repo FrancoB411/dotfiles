@@ -102,4 +102,4 @@ let g:mustache_abbreviations = 1
 " open netRW in current directory
 :map :E :Explore
 
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
