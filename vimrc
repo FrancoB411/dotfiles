@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'moll/vim-bbye'
   Plug 'elixir-lang/vim-elixir'
   Plug 'groenewege/vim-less' 
+  Plug 'christoomey/vim-tmux-navigator'
   Plug 'Shougo/neocomplete.vim'
  " Plug 'skammer/vim-css-color'
 call plug#end()
