@@ -28,7 +28,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'elixir-lang/vim-elixir'
   Plug 'groenewege/vim-less' 
   Plug 'Shougo/neocomplete.vim'
-  Plug 'skammer/vim-css-color'
+  " Plug 'skammer/vim-css-color'
 call plug#end()
 
 " use comma as leader key
