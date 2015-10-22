@@ -9,7 +9,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " VIM-PLUG
+
 call plug#begin('~/.vim/plugged')
+
   Plug 'tpope/vim-sensible'
   Plug 'junegunn/vim-easy-align'
   Plug 'bling/vim-airline'
@@ -25,6 +27,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mustache/vim-mustache-handlebars'
   Plug 'mattn/emmet-vim'
   Plug 'moll/vim-bbye'
+  Plug 'elixir-lang/vim-elixir'
 call plug#end()
 
 " use comma as leader key
