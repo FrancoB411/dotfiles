@@ -122,3 +122,7 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Send API email alerts only to me
 export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{‘franco+alert@liftforward.com'}]"
+
+
+# mactext support for zsh
+eval `/usr/libexec/path_helper -s`

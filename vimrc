@@ -9,7 +9,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " VIM-PLUG
+
 call plug#begin('~/.vim/plugged')
+
   Plug 'tpope/vim-sensible'
   Plug 'junegunn/vim-easy-align'
   Plug 'bling/vim-airline'
@@ -100,3 +102,4 @@ let g:mustache_abbreviations = 1
 " open netRW in current directory
 :map :E :Explore
 
+set clipboard=unnamedplus

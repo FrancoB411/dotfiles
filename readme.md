@@ -15,6 +15,7 @@ Something like this process should get new laptop working...
     ln -s dotfiles/vimrc .vimrc
     ln -s dotfiles/zshrc .zshrc
     ln -s dotfiles/gitignore_global .gitignore_global
+    ln -s dotfiles/tmux.conf .tmux.conf
     # maybe more link ackrc, tmux, etc...
     cd dotfiles
 
