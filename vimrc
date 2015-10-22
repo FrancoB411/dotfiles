@@ -28,10 +28,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'moll/vim-bbye'
   Plug 'elixir-lang/vim-elixir'
+  Plug 'groenewege/vim-less' 
+  Plug 'Shougo/neocomplete.vim'
+ " Plug 'skammer/vim-css-color'
 call plug#end()
 
 " use comma as leader key
 let mapleader=","
+
+" Use neocomplete autocomplete
+let g:neocomplete#enable_at_startup = 1
+
+" remap neocomplete to use the tab key
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " show line numbers
 set nu
@@ -85,6 +94,7 @@ set hlsearch
 " auto reload files that have changed on disk, not files that have been
 " deleted
 set autoread
+
 
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
