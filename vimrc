@@ -31,7 +31,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'groenewege/vim-less' 
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'Shougo/neocomplete.vim'
- " Plug 'skammer/vim-css-color'
+  " Plug 'skammer/vim-css-color'
 call plug#end()
 
 " use comma as leader key
@@ -92,6 +92,14 @@ set hlsearch
 " displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+
+" Map Ctl- h,j,k,l to navigate windows
+:nnoremap <C-H> <C-W>h
+:nnoremap <C-J> <C-W>j
+:nnoremap <C-K> <C-W>k
+:nnoremap <C-L> <C-W>l
+
+
 " auto reload files that have changed on disk, not files that have been
 " deleted
 set autoread
@@ -103,4 +111,4 @@ let g:mustache_abbreviations = 1
 " open netRW in current directory
 :map :E :Explore
 
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
