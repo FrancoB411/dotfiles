@@ -121,7 +121,7 @@ bindkey "^R" history-incremental-search-backward
 export PATH="/usr/local/sbin:$PATH"
 
 # Send API email alerts only to me
-export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{‘franco+alert@liftforward.com'}]"
+export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{'franco+alert@liftforward.com'}]"
 
 
 # mactext support for zsh

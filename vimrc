@@ -68,8 +68,17 @@ nnoremap <leader>v :source $MYVIMRC<CR>
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 
+" Disable the branch name
+let g:airline#extensions#branch#enabled = 0
+
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" let g:airline_section_b#enabled = 0
+let g:airline#extensions#default#layout = [
+      \ [ 'a', 'c' ],
+      \ [ 'x', 'y', 'z', 'warning' ]
+      \ ]
 
 " command-t
 let g:CommandTAlwaysShowDotFiles=1
