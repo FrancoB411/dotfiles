@@ -31,6 +31,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'groenewege/vim-less' 
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'Shougo/neocomplete.vim'
+  Plug 'vim-pandoc/vim-pandoc'
+  Plug 'vim-pandoc/vim-pandoc-syntax'
   " Plug 'skammer/vim-css-color'
 call plug#end()
 
