@@ -33,8 +33,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/neocomplete.vim'
   Plug 'vim-pandoc/vim-pandoc'
   Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'vim-scripts/fountain.vim'
+  Plug 'elmcast/elm-vim'
   " Plug 'skammer/vim-css-color'
+  Plug 'justinmk/vim-sneak'
 call plug#end()
+
+"format elm
+let g:elm_format_autosave = 1
 
 " use comma as leader key
 let mapleader=","
