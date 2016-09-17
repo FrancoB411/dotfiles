@@ -36,3 +36,13 @@
 ehthumbs.db
 Thumbs.db
 *.swp
+*.swo
+
+# Vim stuff
+######################
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
