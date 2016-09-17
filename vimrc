@@ -37,10 +37,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'elmcast/elm-vim'
   " Plug 'skammer/vim-css-color'
   Plug 'justinmk/vim-sneak'
+  Plug 'sjl/gundo.vim'
 call plug#end()
 
 "format elm
 let g:elm_format_autosave = 1
+
+"toogle gundo undo tree
+nnoremap <F5> :GundoToggle<CR>
 
 " use comma as leader key
 let mapleader=","
