@@ -1,5 +1,5 @@
-" A minimal vimrc
 set nocompatible
+
 
 " AUTO-INSTALL VIM-PLUG
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -9,7 +9,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " VIM-PLUG
-
 call plug#begin('~/.vim/plugged')
 
   Plug 'tpope/vim-sensible'
@@ -30,8 +29,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'elixir-lang/vim-elixir'
   Plug 'groenewege/vim-less' 
   Plug 'Shougo/neocomplete.vim'
+  Plug 'JamshedVesuna/vim-markdown-preview'
+  Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-dispatch'
+  " Plug 'spf13/vim-autoclose'
   " Plug 'skammer/vim-css-color'
 call plug#end()
+
+" display images automatically on buffer write 
+let vim_markdown_preview_toggle=2
 
 " use comma as leader key
 let mapleader=","
@@ -90,6 +96,8 @@ set wildignore+=*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif,*.pdf,*.PDF
 set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOTE.*,.sass-cache/**
 set wildignore+=node_modules/**/node_modules/**
 
+set cursorline                      " Highlight current line
+
 " Use silver-searcher 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -101,7 +109,7 @@ set hlsearch
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 
-" Map Ctl- h,j,k,l to navigate windows
+" Map Ctl- h,j,k,l to navigate windows 
 :nnoremap <C-H> <C-W>h
 :nnoremap <C-J> <C-W>j
 :nnoremap <C-K> <C-W>k
@@ -120,3 +128,4 @@ let g:mustache_abbreviations = 1
 :map :E :Explore
 
 " set clipboard=unnamedplus
+
