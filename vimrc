@@ -28,16 +28,28 @@ call plug#begin('~/.vim/plugged')
   Plug 'moll/vim-bbye'
   Plug 'elixir-lang/vim-elixir'
   Plug 'groenewege/vim-less' 
+  Plug 'christoomey/vim-tmux-navigator'
   Plug 'Shougo/neocomplete.vim'
   Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'tpope/vim-dispatch'
-  Plug 'tpope/vim-dispatch'
   " Plug 'spf13/vim-autoclose'
+  Plug 'vim-pandoc/vim-pandoc'
+  Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'vim-scripts/fountain.vim'
+  Plug 'elmcast/elm-vim'
   " Plug 'skammer/vim-css-color'
+  Plug 'justinmk/vim-sneak'
+  Plug 'sjl/gundo.vim'
 call plug#end()
 
 " display images automatically on buffer write 
 let vim_markdown_preview_toggle=2
+"
+"format elm
+let g:elm_format_autosave = 1
+
+"toogle gundo undo tree
+nnoremap <F5> :GundoToggle<CR>
 
 " use comma as leader key
 let mapleader=","
