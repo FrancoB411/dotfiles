@@ -32,6 +32,8 @@ root: ~/workspace/elm-architecture-tutorial
 
 windows:
   - editor:
+      - open https://guide.elm-lang.org/
+      - open http://package.elm-lang.org/packages/elm-lang/core/latest
       - open http://localhost:8000
       - vim .
   - reactor: 
