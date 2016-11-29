@@ -1,7 +1,7 @@
-# ~/.tmuxinator/lf.yml
+# ~/.tmuxinator/elm.yml
 
-name: lf
-root: ~/workspace
+name: elm
+root: ~/workspace/elm-architecture-tutorial
 
 # Optional tmux socket
 # socket_name: foo
@@ -28,31 +28,12 @@ root: ~/workspace
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t lf
+# post: tmux -CC attach -t elm
 
 windows:
-  - lift: 
-      - cd lift
-  - lift-admin: 
-      - cd lift-admin
-  - api: 
-      - cd api
-  - servers:
-      layout: tiled
-      panes:
-        - lift:
-            - cd lift
-            - ember server --proxy=http://localhost:3000
-        - lift-admin:
-            - cd lift-admin
-            - ember server --proxy=http://localhost:3000
-        - pg:
-            - cd api
-            - postgres -D vendor/postgresql
-        - api:
-            - cd api
-            - rabbitmq-server -detached
-            - bundle exec foreman start
-  - logs: 
-      - cd api
-      - tail -f log/development.log
+  - editor:
+      - open http://localhost:8000
+      - vim .
+  - reactor: 
+      - elm-reactor
+  - repl: elm-repl 

@@ -7,6 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="3den"
 #ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -109,7 +110,8 @@ export DOCKER_TLS_VERIFY=1
 
 export HOMEBREW_GITHUB_API_TOKEN=442c95a78656dec3eefe9e1d3b8fd2602749d43e
 
-source ~/dotfiles/tmuxinator.zsh
+# source /Users/francobarbeite/dotfiles/tmuxinator.zsh
+alias mux='tmuxinator'
 
 # Set command-line editor to be vi
 set -o vi
@@ -120,7 +122,7 @@ bindkey "^R" history-incremental-search-backward
 export PATH="/usr/local/sbin:$PATH"
 
 # Send API email alerts only to me
-export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{‘franco+alert@liftforward.com'}]"
+export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{'franco+alert@liftforward.com'}]"
 
 # Add Anaconda to PATH
 # export PATH=~/anaconda/bin:"$PATH"
