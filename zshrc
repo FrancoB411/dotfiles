@@ -2,7 +2,6 @@
 echo "zshrc..."
 export ZSH=$HOME/.oh-my-zsh
 
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -123,6 +122,11 @@ export PATH="/usr/local/sbin:$PATH"
 # Send API email alerts only to me
 export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{‘franco+alert@liftforward.com'}]"
 
+# Add Anaconda to PATH
+# export PATH=~/anaconda/bin:"$PATH"
 
 # mactext support for zsh
 eval `/usr/libexec/path_helper -s`
+
+# added by travis gem
+# [ -f /Users/francobarbeite/.travis/travis.sh ] && source /Users/francobarbeite/.travis/travis.sh
