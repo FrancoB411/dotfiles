@@ -10,7 +10,6 @@ endif
 
 " VIM-PLUG
 call plug#begin('~/.vim/plugged')
-
   Plug 'tpope/vim-sensible'
   Plug 'junegunn/vim-easy-align'
   Plug 'bling/vim-airline'
@@ -30,7 +29,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'groenewege/vim-less' 
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'Shougo/neocomplete.vim'
-  Plug 'JamshedVesuna/vim-markdown-preview'
+  " Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'tpope/vim-dispatch'
   " Plug 'spf13/vim-autoclose'
   Plug 'vim-pandoc/vim-pandoc'
@@ -102,11 +101,13 @@ let g:airline#extensions#default#layout = [
 let g:CommandTAlwaysShowDotFiles=1
 let g:CommandTMatchWindowAtTop=1
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**
+
+" Disable temp and backup files
 set wildignore+=*.ico,*.ICO,backup/**,*.sql,*.dump,*.tmp,*.min.js
 set wildignore+=*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif,*.pdf,*.PDF
 set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOTE.*,.sass-cache/**
 set wildignore+=node_modules/**/node_modules/**
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**,*~,._*
 
 set cursorline                      " Highlight current line
 
