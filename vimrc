@@ -81,6 +81,9 @@ set ts=2 sts=2 sw=2 expandtab
 " .vimrc
 nnoremap <leader>v :source $MYVIMRC<CR>
 
+" run current test
+nnoremap <leader>r :Dispatch bin/rspec %<CR>
+
 " TAB MADNESS
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -109,7 +112,8 @@ set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOT
 set wildignore+=node_modules/**/node_modules/**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**,*~,._*
 
-set cursorline                      " Highlight current line
+" Highlight current line
+set cursorline
 
 " Use silver-searcher 
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -129,10 +133,8 @@ set hlsearch
 :nnoremap <C-L> <C-W>l
 
 
-" auto reload files that have changed on disk, not files that have been
-" deleted
+" auto reload files that changed on disk, not files deleted files
 set autoread
-
 
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
