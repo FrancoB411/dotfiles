@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'skammer/vim-css-color'
   Plug 'justinmk/vim-sneak'
   Plug 'sjl/gundo.vim'
+  Plug 'godlygeek/tabular'
 call plug#end()
 
 " display images automatically on buffer write 
@@ -83,6 +84,10 @@ nnoremap <leader>v :source $MYVIMRC<CR>
 
 " run current test
 nnoremap <leader>r :Dispatch bin/rspec %<CR>
+
+" dispatch async task
+nnoremap <leader>d :Dispatch 
+
 
 " TAB MADNESS
 " Enable the list of buffers
@@ -136,6 +141,9 @@ set hlsearch
 " auto reload files that changed on disk, not files deleted files
 set autoread
 
+" map command T flush to leader f
+:nnoremap <leader>f :CommandTFlush<CR>
+
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
 
@@ -143,4 +151,11 @@ let g:mustache_abbreviations = 1
 :map :E :Explore
 
 " set clipboard=unnamedplus
+
+" set code folding
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
 
