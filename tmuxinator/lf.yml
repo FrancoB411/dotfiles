@@ -35,8 +35,13 @@ windows:
       - cd lift
   - lift-admin: 
       - cd lift-admin
+  - partner: 
+      - cd partner
   - api: 
       - cd api
+  - console:
+      - cd api
+      - rails c
   - servers:
       layout: tiled
       panes:
@@ -45,6 +50,9 @@ windows:
             - ember server --proxy=http://localhost:3000
         - lift-admin:
             - cd lift-admin
+            - ember server --proxy=http://localhost:3000
+        - partner:
+            - cd partner
             - ember server --proxy=http://localhost:3000
         - pg:
             - cd api
