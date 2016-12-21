@@ -158,4 +158,7 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
+" set vim swapfiles to .vim folder
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
 

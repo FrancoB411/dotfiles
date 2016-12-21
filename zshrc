@@ -128,3 +128,7 @@ export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{'franco+alert@liftforward.com'}]"
 
 # mactext support for zsh
 eval `/usr/libexec/path_helper -s`
+
+# suppress autocorrection for
+alias 'ember test'='nocorrect ember test'
+alias 'ember'='nocorrect ember'
