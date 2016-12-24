@@ -39,5 +39,6 @@ windows:
   - server: 
       - pg_ctl -D vendor/postgresql -l logfile start
       - bundle exec rails s
+  - console: rails c
   - logs: tail -f log/development.log
   - tests: guard
