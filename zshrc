@@ -49,7 +49,7 @@ ZSH_CUSTOM=~/dotfiles/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git bundler gem heroku)
 
 # Set up Git autocomplete
 source ~/.git-completion.bash
@@ -86,9 +86,6 @@ export ARCHFLAGS="-arch x86_64"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
-
-export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -132,3 +129,9 @@ eval `/usr/libexec/path_helper -s`
 # suppress autocorrection for
 alias 'ember test'='nocorrect ember test'
 alias 'ember'='nocorrect ember'
+alias 'rspec'='nocorrect rspec'
+alias 'spec'='nocorrect spec'
+
+export NVM_DIR="/Users/francobarbeite/.nvm"
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+

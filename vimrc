@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'justinmk/vim-sneak'
   Plug 'sjl/gundo.vim'
   Plug 'godlygeek/tabular'
+  Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
 " display images automatically on buffer write 
@@ -162,3 +163,5 @@ set foldlevel=2
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
+
+hi SpellBad ctermfg=000 guifg=#000

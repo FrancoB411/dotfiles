@@ -1,19 +1,16 @@
-# ~/.tmuxinator/memo.yml
+# ~/.tmuxinator/cs.yml
 
-name: memo
-root: ~/
+name: cs
+root: ~/Google Drive/CS Curriculum/Notes/computer_science
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
-pre: pkill postgres
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
-
-pre_window: cd ~/Workspace/memorize
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -31,15 +28,8 @@ pre_window: cd ~/Workspace/memorize
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t memo
+# post: tmux -CC attach -t cs
 
 windows:
-  - editor: 
-      - open http://localhost:3000
-      - vim .
-  - server: 
-      - pg_ctl -D vendor/postgresql -l logfile start
-      - bundle exec rails s
-  - console: rails c
-  - logs: tail -f log/development.log
-  - tests: guard
+  - editor:
+    - vim computer_science_from_bottom_up.md 
