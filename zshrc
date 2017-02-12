@@ -106,7 +106,7 @@ export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/mpg/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
-export HOMEBREW_GITHUB_API_TOKEN=442c95a78656dec3eefe9e1d3b8fd2602749d43e
+export HOMEBREW_GITHUB_API_TOKEN=6a7498703b58c336b5c4ad82e9776faaaf2dfae3
 
 # source /Users/francobarbeite/dotfiles/tmuxinator.zsh
 alias mux='tmuxinator'
