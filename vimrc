@@ -145,6 +145,8 @@ set autoread
 " map command T flush to leader f
 :nnoremap <leader>f :CommandTFlush<CR>
 
+" map cclose to leader c
+:nnoremap <leader>c :cclose<CR>
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
 
