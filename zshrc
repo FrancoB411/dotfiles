@@ -106,7 +106,7 @@ export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/mpg/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
-export HOMEBREW_GITHUB_API_TOKEN=6a7498703b58c336b5c4ad82e9776faaaf2dfae3
+export HOMEBREW_GITHUB_API_TOKEN=95ec8a6f98cd8d2d9fa9d3756256cba9e47cdca5
 
 # source /Users/francobarbeite/dotfiles/tmuxinator.zsh
 alias mux='tmuxinator'
@@ -135,3 +135,5 @@ alias 'spec'='nocorrect spec'
 export NVM_DIR="/Users/francobarbeite/.nvm"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

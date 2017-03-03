@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'gioele/vim-autoswap'
   Plug 'tpope/vim-repeat'
-  Plug 'wincent/Command-T'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-unimpaired'
@@ -28,10 +27,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'elixir-lang/vim-elixir'
   Plug 'groenewege/vim-less' 
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'Shougo/neocomplete.vim'
+  Plug 'ervandew/supertab'
   " Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'tpope/vim-dispatch'
-  " Plug 'spf13/vim-autoclose'
   Plug 'vim-pandoc/vim-pandoc'
   Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'vim-scripts/fountain.vim'
@@ -41,6 +39,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'sjl/gundo.vim'
   Plug 'godlygeek/tabular'
   Plug 'wesQ3/vim-windowswap'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " display images automatically on buffer write 
@@ -54,12 +54,6 @@ nnoremap <F5> :GundoToggle<CR>
 
 " use comma as leader key
 let mapleader=","
-
-" Use neocomplete autocomplete
-let g:neocomplete#enable_at_startup = 1
-
-" remap neocomplete to use the tab key
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " show line numbers
 set nu
@@ -106,11 +100,6 @@ let g:airline#extensions#default#layout = [
       \ [ 'x', 'y', 'z', 'warning' ]
       \ ]
 
-" command-t
-let g:CommandTAlwaysShowDotFiles=1
-let g:CommandTMatchWindowAtTop=1
-
-
 " Disable temp and backup files
 set wildignore+=*.ico,*.ICO,backup/**,*.sql,*.dump,*.tmp,*.min.js
 set wildignore+=*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif,*.pdf,*.PDF
@@ -142,8 +131,8 @@ set hlsearch
 " auto reload files that changed on disk, not files deleted files
 set autoread
 
-" map command T flush to leader f
-:nnoremap <leader>f :CommandTFlush<CR>
+" map ,t to FZF
+:nnoremap <leader>t :FZF<CR>
 
 " map cclose to leader c
 :nnoremap <leader>c :cclose<CR>
@@ -166,4 +155,4 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
 
-hi SpellBad ctermfg=000 guifg=#000
+hi SpellBad ctermfg=000 guifg=#000000
