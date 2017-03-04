@@ -13,7 +13,7 @@ pre: pkill postgres
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
 
-pre_window: cd ~/Workspace/memorize
+pre_window: cd ~/workspace/memorize
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -34,7 +34,7 @@ pre_window: cd ~/Workspace/memorize
 # post: tmux -CC attach -t memo
 
 windows:
-  - editor: 
+  - vim: 
       - open http://localhost:3000
       - vim .
   - server: 
@@ -42,4 +42,5 @@ windows:
       - bundle exec rails s
   - console: rails c
   - logs: tail -f log/development.log
-  - tests: guard
+  - tests: 
+      - guard
