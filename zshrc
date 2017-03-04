@@ -52,7 +52,7 @@ ZSH_CUSTOM=~/dotfiles/zsh_custom
 plugins=(git bundler gem heroku)
 
 # Set up Git autocomplete
-source ~/.git-completion.bash
+# source ~/.git-completion.bash
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,7 +92,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.1.3
+chruby ruby-2.3.1
 
 export JAVA_HOME=`/usr/libexec/java_home`
 
@@ -100,11 +100,6 @@ export JAVA_HOME=`/usr/libexec/java_home`
 
 
 eval "$(direnv hook zsh)"
-
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/mpg/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
 
 export HOMEBREW_GITHUB_API_TOKEN=95ec8a6f98cd8d2d9fa9d3756256cba9e47cdca5
 
@@ -135,5 +130,5 @@ alias 'spec'='nocorrect spec'
 export NVM_DIR="/Users/francobarbeite/.nvm"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
-
+# for fzf fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
