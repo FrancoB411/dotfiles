@@ -32,15 +32,29 @@ pre_window: cd ~/workspace/memorize
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t memo
+post: pkill postgres
 
 windows:
-  - vim: 
-      - open http://localhost:3000
+  - api: 
       - vim .
-  - server: 
-      - pg_ctl -D vendor/postgresql -l logfile start
-      - bundle exec rails s
-  - console: rails c
+  - memo: 
+      - cd ../memo
+      - vim .
+  - servers: 
+      layout: tiled
+      panes:
+        - memo:
+            - cd ../memo
+            - ember server --proxy=http://localhost:3000
+        - pg:
+            - postgres -D vendor/postgresql
+
+        - api:
+            - bundle exec rails s 
+  - console: 
+      - open http://localhost:4200/
+      - open http://localhost:3000
+      - rails c
   - logs: tail -f log/development.log
   - tests: 
       - guard
