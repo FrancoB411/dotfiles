@@ -86,6 +86,7 @@ export ARCHFLAGS="-arch x86_64"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
+alias ctags="`brew --prefix`/bin/ctags"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
