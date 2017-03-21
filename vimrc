@@ -163,5 +163,11 @@ set foldlevel=2
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
+" Remove Netrw banner
+let g:netrw_banner = 0
+
+" Set Netrw to display in tree mode by default
+let g:netrw_liststyle = 3
+
 
 hi SpellBad ctermfg=000 guifg=#000000
