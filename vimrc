@@ -122,6 +122,10 @@ set cursorline
 " Use silver-searcher 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" Have fzf use ag
+let $FZF_DEFAULT_COMMAND= 'ag -g ""'
+
+
 " Highlight all text matching the current search
 set hlsearch
 
