@@ -48,10 +48,10 @@ ZSH_CUSTOM=~/dotfiles/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git bundler gem heroku)
 
 # Set up Git autocomplete
-source ~/.git-completion.bash
+# source ~/.git-completion.bash
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,16 +85,14 @@ export ARCHFLAGS="-arch x86_64"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
-
-export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
+alias ctags="`brew --prefix`/bin/ctags"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.1.3
+chruby ruby-2.3.1
 
 export JAVA_HOME=`/usr/libexec/java_home`
 
@@ -103,12 +101,7 @@ export JAVA_HOME=`/usr/libexec/java_home`
 
 eval "$(direnv hook zsh)"
 
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/mpg/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
-export HOMEBREW_GITHUB_API_TOKEN=442c95a78656dec3eefe9e1d3b8fd2602749d43e
+export HOMEBREW_GITHUB_API_TOKEN=95ec8a6f98cd8d2d9fa9d3756256cba9e47cdca5
 
 # source /Users/francobarbeite/dotfiles/tmuxinator.zsh
 alias mux='tmuxinator'
@@ -132,3 +125,15 @@ eval `/usr/libexec/path_helper -s`
 
 # added by travis gem
 # [ -f /Users/francobarbeite/.travis/travis.sh ] && source /Users/francobarbeite/.travis/travis.sh
+
+# suppress autocorrection for
+alias 'ember test'='nocorrect ember test'
+alias 'ember'='nocorrect ember'
+alias 'rspec'='nocorrect rspec'
+alias 'spec'='nocorrect spec'
+
+export NVM_DIR="/Users/francobarbeite/.nvm"
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+
+# for fzf fuzzy search
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

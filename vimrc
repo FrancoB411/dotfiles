@@ -10,14 +10,12 @@ endif
 
 " VIM-PLUG
 call plug#begin('~/.vim/plugged')
-
   Plug 'tpope/vim-sensible'
   Plug 'junegunn/vim-easy-align'
   Plug 'bling/vim-airline'
   Plug 'tpope/vim-surround'
   Plug 'gioele/vim-autoswap'
   Plug 'tpope/vim-repeat'
-  Plug 'wincent/Command-T'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-unimpaired'
@@ -29,10 +27,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'elixir-lang/vim-elixir'
   Plug 'groenewege/vim-less' 
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'Shougo/neocomplete.vim'
-  Plug 'JamshedVesuna/vim-markdown-preview'
+  Plug 'ervandew/supertab'
+  " Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'tpope/vim-dispatch'
-  " Plug 'spf13/vim-autoclose'
   Plug 'vim-pandoc/vim-pandoc'
   Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'vim-scripts/fountain.vim'
@@ -40,6 +37,10 @@ call plug#begin('~/.vim/plugged')
   " Plug 'skammer/vim-css-color'
   Plug 'justinmk/vim-sneak'
   Plug 'sjl/gundo.vim'
+  Plug 'godlygeek/tabular'
+  Plug 'wesQ3/vim-windowswap'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " display images automatically on buffer write 
@@ -53,12 +54,6 @@ nnoremap <F5> :GundoToggle<CR>
 
 " use comma as leader key
 let mapleader=","
-
-" Use neocomplete autocomplete
-let g:neocomplete#enable_at_startup = 1
-
-" remap neocomplete to use the tab key
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " show line numbers
 set nu
@@ -82,6 +77,13 @@ set ts=2 sts=2 sw=2 expandtab
 " .vimrc
 nnoremap <leader>v :source $MYVIMRC<CR>
 
+" run current test
+nnoremap <leader>r :Dispatch bin/rspec %<CR>
+
+" dispatch async task
+nnoremap <leader>d :Dispatch 
+
+
 " TAB MADNESS
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -98,20 +100,31 @@ let g:airline#extensions#default#layout = [
       \ [ 'x', 'y', 'z', 'warning' ]
       \ ]
 
-" command-t
-let g:CommandTAlwaysShowDotFiles=1
-let g:CommandTMatchWindowAtTop=1
+" air-line
+let g:airline_powerline_fonts = 1
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+
+
+" Disable temp and backup files
 set wildignore+=*.ico,*.ICO,backup/**,*.sql,*.dump,*.tmp,*.min.js
 set wildignore+=*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif,*.pdf,*.PDF
 set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOTE.*,.sass-cache/**
 set wildignore+=node_modules/**/node_modules/**
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**,*~,._*
 
-set cursorline                      " Highlight current line
+" Highlight current line
+set cursorline
 
 " Use silver-searcher 
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Have fzf use ag
+let $FZF_DEFAULT_COMMAND= 'ag -g ""'
+
 
 " Highlight all text matching the current search
 set hlsearch
@@ -128,11 +141,14 @@ set hlsearch
 :nnoremap <C-L> <C-W>l
 
 
-" auto reload files that have changed on disk, not files that have been
-" deleted
+" auto reload files that changed on disk, not files deleted files
 set autoread
 
+" map ,t to FZF
+:nnoremap <leader>t :FZF<CR>
 
+" map cclose to leader c
+:nnoremap <leader>c :cclose<CR>
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
 
@@ -141,3 +157,21 @@ let g:mustache_abbreviations = 1
 
 " set clipboard=unnamedplus
 
+" set code folding
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+" set vim swapfiles to .vim folder
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+
+" Remove Netrw banner
+let g:netrw_banner = 0
+
+" Set Netrw to display in tree mode by default
+let g:netrw_liststyle = 3
+
+
+hi SpellBad ctermfg=000 guifg=#000000

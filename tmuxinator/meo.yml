@@ -1,7 +1,7 @@
-# ~/.tmuxinator/elm.yml
+# ~/.tmuxinator/meo.yml
 
-name: elm
-root: ~/workspace/elm-architecture-tutorial
+name: meo
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -28,14 +28,16 @@ root: ~/workspace/elm-architecture-tutorial
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t elm
+# post: tmux -CC attach -t meo
 
 windows:
   - editor:
-      - open https://guide.elm-lang.org/
-      - open http://package.elm-lang.org/packages/elm-lang/core/latest
-      - open http://localhost:8000
-      - vim .
-  - reactor: 
-      - elm-reactor
-  - repl: elm-repl 
+      layout: main-vertical
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - vim
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log

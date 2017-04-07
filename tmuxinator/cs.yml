@@ -1,7 +1,7 @@
-# ~/.tmuxinator/elm.yml
+# ~/.tmuxinator/cs.yml
 
-name: elm
-root: ~/workspace/elm-architecture-tutorial
+name: cs
+root: ~/Google Drive/CS Curriculum/Notes/computer_science
 
 # Optional tmux socket
 # socket_name: foo
@@ -28,14 +28,8 @@ root: ~/workspace/elm-architecture-tutorial
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t elm
+# post: tmux -CC attach -t cs
 
 windows:
   - editor:
-      - open https://guide.elm-lang.org/
-      - open http://package.elm-lang.org/packages/elm-lang/core/latest
-      - open http://localhost:8000
-      - vim .
-  - reactor: 
-      - elm-reactor
-  - repl: elm-repl 
+    - vim computer_science_from_bottom_up.md 

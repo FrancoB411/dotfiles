@@ -1,7 +1,7 @@
-# ~/.tmuxinator/elm.yml
+# ~/.tmuxinator/stats.yml
 
-name: elm
-root: ~/workspace/elm-architecture-tutorial
+name: stats
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -28,14 +28,13 @@ root: ~/workspace/elm-architecture-tutorial
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t elm
+# post: tmux -CC attach -t stats
 
 windows:
-  - editor:
-      - open https://guide.elm-lang.org/
-      - open http://package.elm-lang.org/packages/elm-lang/core/latest
-      - open http://localhost:8000
-      - vim .
-  - reactor: 
-      - elm-reactor
-  - repl: elm-repl 
+  - probability:
+    - cd Google\ Drive/CS\ Curriculum/Notes/Probability/ 
+    - vim .
+  - discrete:
+    - cd Google\ Drive/CS\ Curriculum/Notes/CS-Math/
+    - open discrete-structures/DiscreteStructures.pdf
+    - vim . 

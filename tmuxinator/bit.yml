@@ -1,16 +1,19 @@
-# ~/.tmuxinator/elm.yml
+# ~/.tmuxinator/memo.yml
 
-name: elm
-root: ~/workspace/elm-architecture-tutorial
+name: bit
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
+pre: pkill postgres
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
+
+pre_window: cd ~/workspace/magnetissimo
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -28,14 +31,14 @@ root: ~/workspace/elm-architecture-tutorial
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t elm
+# post: tmux -CC attach -t memo
+post: pkill postgres
 
 windows:
-  - editor:
-      - open https://guide.elm-lang.org/
-      - open http://package.elm-lang.org/packages/elm-lang/core/latest
-      - open http://localhost:8000
+  - vim: 
       - vim .
-  - reactor: 
-      - elm-reactor
-  - repl: elm-repl 
+  - server: 
+      - open http://localhost:4000/
+      - mix phoenix.server
+
+
