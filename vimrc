@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'elixir-lang/vim-elixir'
   Plug 'groenewege/vim-less' 
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'sukima/vim-emberlayout'
   Plug 'ervandew/supertab'
   " Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'tpope/vim-dispatch'
@@ -41,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'wesQ3/vim-windowswap'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " display images automatically on buffer write 
