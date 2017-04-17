@@ -65,3 +65,6 @@ windows:
   - logs: 
       - cd api
       - tail -f log/development.log
+  - notes: 
+      - cd ~/Google\ Drive/CS\ Curriculum/Notes
+      - vim liftforward.md
