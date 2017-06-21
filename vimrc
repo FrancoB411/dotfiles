@@ -155,7 +155,7 @@ command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
 
 " open netRW in current directory
-:map :E :Explore
+:map :exp :NERDTreeFind<cr>
 
 " set clipboard=unnamedplus
 
