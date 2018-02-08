@@ -86,7 +86,6 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
 alias ctags="`brew --prefix`/bin/ctags"
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -115,7 +114,8 @@ bindkey "^R" history-incremental-search-backward
 export PATH="/usr/local/sbin:$PATH"
 
 # Send API email alerts only to me
-export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[{'franco+alert@liftforward.com'}]"
+export LOAN_APP_ALERT_EMAIL_TO_ARRAY="[\"franco+alert@liftforward.com\"]"
+
 
 # Add Anaconda to PATH
 # export PATH=~/anaconda/bin:"$PATH"
@@ -131,9 +131,29 @@ alias 'ember test'='nocorrect ember test'
 alias 'ember'='nocorrect ember'
 alias 'rspec'='nocorrect rspec'
 alias 'spec'='nocorrect spec'
+alias 'bundle exec rspec'='nocorrect bundle exec rspec'
 
 export NVM_DIR="/Users/francobarbeite/.nvm"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
 # for fzf fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# launch tensoflow
+alias tfo="source ~/workspace/tensorflow/bin/activate"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/francobarbeite/workspace/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/francobarbeite/workspace/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/francobarbeite/workspace/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/francobarbeite/workspace/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Rust package manager
+export PATH="/Users/francobarbeite/.cargo/bin:$PATH"
+
+# Anaconda for data science
+export PATH=/usr/local/anaconda3/bin:"$PATH"
+
+# use asdf
+source '/usr/local/opt/asdf/asdf.sh'
