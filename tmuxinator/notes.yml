@@ -33,3 +33,6 @@ root: ~/Google Drive/CS Curriculum/Notes
 windows:
   - notes:
       - vim .
+  - journal:
+      - cd ../Journal
+      - vim .
