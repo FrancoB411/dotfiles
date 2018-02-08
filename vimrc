@@ -24,8 +24,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'mustache/vim-mustache-handlebars'
   Plug 'mattn/emmet-vim'
   Plug 'moll/vim-bbye'
-  Plug 'elixir-lang/vim-elixir'
-  Plug 'groenewege/vim-less' 
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'sukima/vim-emberlayout'
   Plug 'ervandew/supertab'
@@ -34,8 +32,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-pandoc/vim-pandoc'
   Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'vim-scripts/fountain.vim'
-  Plug 'elmcast/elm-vim'
-  " Plug 'skammer/vim-css-color'
   Plug 'justinmk/vim-sneak'
   Plug 'sjl/gundo.vim'
   Plug 'godlygeek/tabular'
@@ -43,7 +39,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdtree'
+  Plug 'sheerun/vim-polyglot'
 call plug#end()
+
+" For vim-polyglot
+syntax on
 
 " display images automatically on buffer write 
 let vim_markdown_preview_toggle=2
@@ -177,3 +177,10 @@ let g:netrw_liststyle = 3
 
 
 hi SpellBad ctermfg=000 guifg=#000000
+
+" strip trailing whitespace on save
+autocmd FileType c,cpp,java,js,yml,rb,hbs,php autocmd BufWritePre <buffer> %s/\s\+$//e
+
+" auto format elixir files
+autocmd BufWritePost *.exs silent :!mix format %
+autocmd BufWritePost *.ex silent :!mix format %
