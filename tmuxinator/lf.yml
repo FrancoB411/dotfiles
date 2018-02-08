@@ -68,3 +68,6 @@ windows:
   - notes: 
       - cd ~/Google\ Drive/CS\ Curriculum/Notes
       - vim liftforward.md
+  - journal: 
+      - cd ~/Google\ Drive/CS\ Curriculum/Journal
+      - vim .
