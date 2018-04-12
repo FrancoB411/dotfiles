@@ -7,7 +7,7 @@ root: ~/workspace
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-pre: pkill postgres 
+on_project_start: pkill postgres 
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -29,7 +29,9 @@ pre: pkill postgres
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t lf
-post: pkill postgres 
+on_project_end: pkill postgres 
+
+startup_window: servers 
 
 windows:
   - lift: 

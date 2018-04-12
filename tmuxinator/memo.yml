@@ -58,3 +58,6 @@ windows:
   - logs: tail -f log/development.log
   - tests: 
       - guard
+  - notes: 
+      - cd ~/Google\ Drive/CS\ Curriculum/Journal/
+      - vim . 
