@@ -157,3 +157,6 @@ export PATH=/usr/local/anaconda3/bin:"$PATH"
 
 # use asdf
 source '/usr/local/opt/asdf/asdf.sh'
+
+# Initialize rbenv
+eval "$(rbenv init -)"
