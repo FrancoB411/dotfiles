@@ -102,7 +102,6 @@ gem install gem-path
 gem install pg
 # nokogiri depends on a brew package ...
 gem install nokogiri -- --with-iconv-dir=`brew --prefix libiconv`
-````
 
 ## Using vim...
 
@@ -114,3 +113,5 @@ Leader key is mapped to `,`
 rbenv install script requires eval `"$(rbenv init -)"` .bash_profile to exist for it to install bundler
 But .bash_profile might not exist on the machine yet. 
 Best option might be not to use rbenv at all. 
+
+Mkdir on ~/.vim/backup/ and ~/.vim/swp
