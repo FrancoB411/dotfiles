@@ -160,3 +160,9 @@ source '/usr/local/opt/asdf/asdf.sh'
 
 # Initialize rbenv
 eval "$(rbenv init -)"
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+# Loads direnv environment variables if project has a .direnv file
+eval "$(direnv hook bash)"
