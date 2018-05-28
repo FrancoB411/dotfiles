@@ -110,3 +110,7 @@ Start vim - plugins should install automagically.
 To see if it worked, run `:PlugStatus` and maybe `:PlugInstall` if needed
 Leader key is mapped to `,` 
 
+## Fix rbenv bug 
+rbenv install script requires rbvenv init in .bash_profile to exist for it to install bundler
+But .bash_profile might not exist on the machine yet. 
+Best option might be not to use rbenv at all. 
