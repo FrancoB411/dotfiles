@@ -184,3 +184,6 @@ autocmd FileType c,cpp,java,js,yml,rb,hbs,php autocmd BufWritePre <buffer> %s/\s
 " auto format elixir files
 autocmd BufWritePost *.exs silent :!mix format %
 autocmd BufWritePost *.ex silent :!mix format %
+
+" Sets the ; key to open the list of buffer
+nmap ; :Buffers<CR>
