@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'moll/vim-bbye'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'sukima/vim-emberlayout'
+  " Plug 'sukima/vim-emberlayout'
   Plug 'ervandew/supertab'
   " Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'tpope/vim-dispatch'
@@ -76,7 +76,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 " VIMCASTS...
 set ts=2 sts=2 sw=2 expandtab
 
-" .vimrc
+"source .vimrc with ,v
 nnoremap <leader>v :source $MYVIMRC<CR>
 
 " run current test
@@ -88,7 +88,7 @@ nnoremap <leader>d :Dispatch
 
 " TAB MADNESS
 " Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 " Disable the branch name
 let g:airline#extensions#branch#enabled = 0
@@ -124,6 +124,9 @@ set cursorline
 " Use silver-searcher 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" Set fzf runtime path
+set rtp+=/usr/local/opt/fzf
+
 " Have fzf use ag
 let $FZF_DEFAULT_COMMAND= 'ag -g ""'
 
@@ -157,7 +160,7 @@ let g:mustache_abbreviations = 1
 " open netRW in current directory
 :map :exp :NERDTreeFind<cr>
 
-" set clipboard=unnamedplus
+set clipboard=unnamed
 
 " set code folding
 set foldmethod=indent   
@@ -186,4 +189,4 @@ autocmd BufWritePost *.exs silent :!mix format %
 autocmd BufWritePost *.ex silent :!mix format %
 
 " Sets the ; key to open the list of buffer
-nmap ; :Buffers<CR>
+nmap ; :buffers<CR>
