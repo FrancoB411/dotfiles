@@ -23,7 +23,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -48,7 +48,7 @@ ZSH_CUSTOM=~/dotfiles/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler gem heroku)
+plugins=(git bundler gem heroku kubectl)
 
 # Set up Git autocomplete
 # source ~/.git-completion.bash
@@ -86,14 +86,17 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
 alias ctags="`brew --prefix`/bin/ctags"
+# Use Homebrew VIM, cause it has system clipboard
+alias vim='/usr/local/Cellar/vim/8.1.0001/bin/vim'
+alias vi='/usr/local/Cellar/vim/8.1.0001/bin/vim'
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.3.1
+# source /usr/local/opt/chruby/share/chruby/chruby.sh
+# source /usr/local/opt/chruby/share/chruby/auto.sh
+# chruby ruby-2.3.1
 
-export JAVA_HOME=`/usr/libexec/java_home`
+# export JAVA_HOME=`/usr/libexec/java_home`
 
 #export EXPERIAN_ETC_HOSTS_TEST=true
 
@@ -136,7 +139,7 @@ alias 'bundle exec rspec'='nocorrect bundle exec rspec'
 export NVM_DIR="/Users/francobarbeite/.nvm"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
-# for fzf fuzzy search
+# init fzf for fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # launch tensoflow
@@ -158,11 +161,18 @@ export PATH=/usr/local/anaconda3/bin:"$PATH"
 # use asdf
 source '/usr/local/opt/asdf/asdf.sh'
 
-# Initialize rbenv
-eval "$(rbenv init -)"
-
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+# source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/auto.sh
 
 # Loads direnv environment variables if project has a .direnv file
 eval "$(direnv hook bash)"
+
+# Print current ruby version in command line prompt
+# asdf current ruby | awk -F' ' '{print }'
+
+# Point rbenv to the directory where homebrew installed the binary
+export RBENV_ROOT="/usr/local/var/rbenv"
+
+# Initialize rbenv
+eval "$(rbenv init -)"
+
