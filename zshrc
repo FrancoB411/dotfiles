@@ -87,8 +87,8 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
 alias ctags="`brew --prefix`/bin/ctags"
 # Use Homebrew VIM, cause it has system clipboard
-alias vim='/usr/local/Cellar/vim/8.1.0001/bin/vim'
-alias vi='/usr/local/Cellar/vim/8.1.0001/bin/vim'
+alias vim='/usr/local/Cellar/vim/*/bin/vim'
+alias vi='/usr/local/Cellar/vim/*/bin/vim'
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
