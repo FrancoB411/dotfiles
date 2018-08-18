@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -707,16 +709,18 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>315 183 695 414 0 0 1280 777 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>330 288 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>277 348 918 401 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 74 1277 703 0 0 1280 777 </string>
+	<string>0 0 1280 777 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>34 178 710 599 0 0 1280 777 </string>
+	<string>514 365 570 352 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>190 68 976 709 0 0 1280 777 </string>
+	<string>0 419 570 352 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>272 246 570 352 0 0 1280 777 </string>
+	<string>329 410 570 352 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>426 336 570 352 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -2012,6 +2016,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>45B03627-2598-4F13-A3F9-0D14BB273FCC</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>549164650.970788</real>
 	<key>OpenTmuxWindowsIn</key>
@@ -2060,7 +2066,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-29T11:32:47Z</date>
+	<date>2018-08-05T04:40:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>URLHandlersByGuid</key>

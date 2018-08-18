@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'sheerun/vim-polyglot'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
 " For vim-polyglot
