@@ -86,9 +86,6 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
 alias ctags="`brew --prefix`/bin/ctags"
-# Use Homebrew VIM, cause it has system clipboard
-alias vim='/usr/local/Cellar/vim/*/bin/vim'
-alias vi='/usr/local/Cellar/vim/*/bin/vim'
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -176,3 +173,8 @@ export RBENV_ROOT="/usr/local/var/rbenv"
 # Initialize rbenv
 eval "$(rbenv init -)"
 
+#cargo for rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# added by travis gem
+[ -f /Users/franco/.travis/travis.sh ] && source /Users/franco/.travis/travis.sh

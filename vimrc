@@ -41,6 +41,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'sheerun/vim-polyglot'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 call plug#end()
 
 " For vim-polyglot
@@ -179,7 +180,6 @@ let g:netrw_banner = 0
 " Set Netrw to display in tree mode by default
 let g:netrw_liststyle = 3
 
-
 hi SpellBad ctermfg=000 guifg=#000000
 
 " strip trailing whitespace on save
@@ -189,5 +189,6 @@ autocmd FileType c,cpp,java,js,yml,rb,hbs,php autocmd BufWritePre <buffer> %s/\s
 autocmd BufWritePost *.exs silent :!mix format %
 autocmd BufWritePost *.ex silent :!mix format %
 
-" Sets the ; key to open the list of buffer
-nmap ; :buffers<CR>
+" auto formats rust files
+autocmd BufWritePost *.rs silent :!rustup run stable rustfmt %
+
