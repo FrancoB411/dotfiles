@@ -1,0 +1,70 @@
+# ~/.tmuxinator/valius.yml
+
+name: valius
+root: ~/Workspace/valius
+
+startup_window: servers 
+
+windows:
+  - notes: 
+      - cd ~/Google\ Drive/CS\ Curriculum/Notes
+      - vim liftforward.md
+  - journal: 
+      - cd ~/Google\ Drive/CS\ Curriculum/Journal
+      - vim .
+  - UI: 
+      - cd valius-ui
+      - vim . 
+  - API: 
+      - cd api
+      - vim .
+  - UI-Server:
+      - cd valius-ui
+      - ember server --proxy=http://localhost:4000 
+  - API-server:
+      - cd api 
+      - iex -S mix phx.server
+  - UI-Tests:
+      - cd valius-ui
+      - ember test -s  
+  - API-tests:
+      - cd api 
+  - Shell:
+      - cd api 
+
+# Optional tmux socket
+# # socket_name: foo
+
+on_project_start: /usr/local/Cellar/postgresql@10/10.6_1/bin/postgres -D /usr/local/var/postgres
+
+# # Run on project start, the first time
+# # on_project_first_start: command
+# # Run on project start, after the first time
+# # on_project_restart: command
+# # Run on project exit ( detaching from tmux session )
+on_project_exit: pg_ctl -D /usr/local/var/postgres stop
+
+# # Run on project stop
+# # on_project_stop: command
+#
+# # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# # pre_window: rbenv shell 2.0.0-p247
+#
+# # Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# # tmux_options: -f ~/.tmux.mac.conf
+#
+# # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# # tmux_command: byobu
+#
+# # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# # startup_window: editor
+#
+# # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# # startup_pane: 1
+#
+# # Controls whether the tmux session should be attached to automatically. Defaults to true.
+# # attach: false
+#
+# # Runs after everything. Use it to attach to tmux with custom options etc.
+# # post: tmux -CC attach -t valius
+#
