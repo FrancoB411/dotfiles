@@ -42,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'sheerun/vim-polyglot'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+  " Plug 'joukevandermaas/vim-ember-hbs'
 call plug#end()
 
 " For vim-polyglot
