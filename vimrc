@@ -121,8 +121,38 @@ set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOT
 set wildignore+=node_modules/**/node_modules/**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**,*~,._*
 
+
+
+" HIGHLIGHTING
+ 
 " Highlight current line
 set cursorline
+
+" Highlight all text matching the current search
+set hlsearch
+
+" Press Space to turn off highlighting and clear any displayed message
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+
+
+
+
+" Map Ctl- h,j,k,l to navigate windows 
+:nnoremap <C-H> <C-W>h
+:nnoremap <C-J> <C-W>j
+:nnoremap <C-K> <C-W>k
+:nnoremap <C-L> <C-W>l
+
+" auto reload files that changed on disk, not deleted files
+set autoread
+
+
+
+" FUZZY FINDER
+ 
+" map ,t to FZF
+:nnoremap <leader>t :FZF<CR>
 
 " Use silver-searcher 
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -133,35 +163,15 @@ set rtp+=/usr/local/opt/fzf
 " Have fzf use ag
 let $FZF_DEFAULT_COMMAND= 'ag -g ""'
 
-
-" Highlight all text matching the current search
-set hlsearch
-
-" Press Space to turn off highlighting and clear any message already
-" displayed.
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
-
-" Map Ctl- h,j,k,l to navigate windows 
-:nnoremap <C-H> <C-W>h
-:nnoremap <C-J> <C-W>j
-:nnoremap <C-K> <C-W>k
-:nnoremap <C-L> <C-W>l
-
-
-" auto reload files that changed on disk, not files deleted files
-set autoread
-
-" map ,t to FZF
-:nnoremap <leader>t :FZF<CR>
-
-" map cclose to leader c
+" map close quickfix to ,c
 :nnoremap <leader>c :cclose<CR>
+
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
 let g:mustache_abbreviations = 1
 
-" open netRW in current directory
-:map :exp :NERDTreeFind<cr>
+
+
+
 
 set clipboard=unnamed
 
@@ -174,6 +184,13 @@ set foldlevel=2
 " set vim swapfiles to .vim folder
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
+
+
+
+" NETRW
+
+" open Netrw in current directory
+:map :exp :NERDTreeFind<cr>
 
 " Remove Netrw banner
 let g:netrw_banner = 0
