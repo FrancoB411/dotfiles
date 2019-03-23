@@ -1,4 +1,7 @@
 set nocompatible
+syntax on
+set nowrap
+set encoding=utf8
 
 
 " AUTO-INSTALL VIM-PLUG
