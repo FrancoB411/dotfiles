@@ -32,10 +32,11 @@ windows:
   - Shell:
       - cd api 
 
+
 # Optional tmux socket
 # # socket_name: foo
 
-on_project_start: /usr/local/Cellar/postgresql@10/10.6_1/bin/postgres -D /usr/local/var/postgres
+on_project_start: /usr/local/Cellar/postgresql@10/10.6_1/bin/postgres -D /usr/local/var/postgres &> /dev/null &
 
 # # Run on project start, the first time
 # # on_project_first_start: command
