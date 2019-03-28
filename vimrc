@@ -1,6 +1,12 @@
+" set compatible off so many plugins can work
 set nocompatible
+
+
 syntax on
-set nowrap
+
+
+
+" set nowrap
 set encoding=utf8
 
 
@@ -29,23 +35,37 @@ call plug#begin('~/.vim/plugged')
   Plug 'moll/vim-bbye'
   Plug 'christoomey/vim-tmux-navigator'
   " Plug 'sukima/vim-emberlayout'
+  
+  " Snippets and Auto Complete
+  Plug 'sirver/ultisnips'
+  Plug 'honza/vim-snippets'
   Plug 'ervandew/supertab'
-  " Plug 'JamshedVesuna/vim-markdown-preview'
+
   Plug 'tpope/vim-dispatch'
-  Plug 'vim-pandoc/vim-pandoc'
-  Plug 'vim-pandoc/vim-pandoc-syntax'
-  Plug 'vim-scripts/fountain.vim'
+  
   Plug 'justinmk/vim-sneak'
   Plug 'sjl/gundo.vim'
   Plug 'godlygeek/tabular'
   Plug 'wesQ3/vim-windowswap'
+
+  "Search
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  
+  " File Navigation
   Plug 'scrooloose/nerdtree'
-  Plug 'sheerun/vim-polyglot'
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
   Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
   " Plug 'joukevandermaas/vim-ember-hbs'
+ 
+  " Markdown / Writing
+  Plug 'vim-pandoc/vim-pandoc'
+  Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'vim-scripts/fountain.vim'
+
+  " Formatting / Syntax Highlighting
+  Plug 'sheerun/vim-polyglot'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
 " For vim-polyglot
@@ -174,7 +194,9 @@ let g:mustache_abbreviations = 1
 
 
 
-
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-f>"
 
 set clipboard=unnamed
 
