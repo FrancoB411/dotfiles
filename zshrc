@@ -178,3 +178,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # added by travis gem
 [ -f /Users/franco/.travis/travis.sh ] && source /Users/franco/.travis/travis.sh
+
+# Enable history in IEX through Erlang(OTP)
+export ERL_AFLAGS="-kernel shell_history enabled"
