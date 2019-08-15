@@ -333,6 +333,14 @@ you should place your code here."
     (shell)
     (neotree-toggle)
     (winum-select-window-1))
+  (spacemacs|define-custom-layout "@CPP"
+    :binding "C"
+    :body
+    (make-frame)
+    (find-file "~/Workspace/learning/Udacity/C++/README.md")
+    (split-window-right)
+    (shell)
+    (neotree-toggle))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
