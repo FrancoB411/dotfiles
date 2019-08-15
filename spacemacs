@@ -327,12 +327,14 @@ you should place your code here."
   (spacemacs|define-custom-layout "@HTDP"
     :binding "H"
     :body
-    (winum-select-window-1)
+    (make-frame)
     (find-file "~/Workspace/learning/racket/README.md")
     (split-window-right)
     (shell)
-    (neotree-toggle)
-    (winum-select-window-1))
+    (comint-send-string "*shell*" "echo HTDP\n")
+    (comint-send-string "*shell*" "racket\n")
+    (neotree-toggle))
+
   (spacemacs|define-custom-layout "@CPP"
     :binding "C"
     :body
