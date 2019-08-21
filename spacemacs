@@ -377,3 +377,9 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(with-eval-after-load 'org
+  ;; Replace org-set-tags with org-set-tags-command in keybinding
+  ;; TODO: when upgrading spacemacs, check that this is still necessary.
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode ":" 'org-set-tags-command)
+)
