@@ -325,8 +325,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; Javascript: Set 2 space indent
   (setq-default js2-basic-offset 2)
   (setq-default js-indent-level 2)
+
+  ;; Ember-CLI: Avoids static file conflict with build system
+  (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+  (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+  (setq create-lockfiles nil)
+
   ;; main-vertical
   (spacemacs|define-custom-layout "@HTDP"
     :binding "H"
