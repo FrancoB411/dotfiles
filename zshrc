@@ -132,6 +132,7 @@ alias 'ember'='nocorrect ember'
 alias 'rspec'='nocorrect rspec'
 alias 'spec'='nocorrect spec'
 alias 'bundle exec rspec'='nocorrect bundle exec rspec'
+alias mix='nocorrect mix'
 
 export NVM_DIR="/Users/francobarbeite/.nvm"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
@@ -153,7 +154,7 @@ if [ -f '/Users/francobarbeite/workspace/google-cloud-sdk/completion.zsh.inc' ];
 export PATH="/Users/francobarbeite/.cargo/bin:$PATH"
 
 # Anaconda for data science
-export PATH=/usr/local/anaconda3/bin:"$PATH"
+# export PATH=/usr/local/anaconda3/bin:"$PATH"
 
 # use asdf
 source '/usr/local/opt/asdf/asdf.sh'
@@ -181,3 +182,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Enable history in IEX through Erlang(OTP)
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# add flutter sdk
+export PATH="$PATH:/usr/local/flutter/bin"
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
