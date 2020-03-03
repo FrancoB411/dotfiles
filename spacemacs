@@ -334,6 +334,9 @@ you should place your code here."
   ;; enable fountain-mode
   (require 'fountain-mode)
 
+  ;; enable svelte
+  (setq web-mode-engines-alist '(("svelte"    . "\\.svelte\\'")))
+
   ;; Javascript: Set 2 space indent
   (setq-default js2-basic-offset 2)
   (setq-default js-indent-level 2)
@@ -368,6 +371,7 @@ you should place your code here."
   (with-eval-after-load 'org
     ;; Add org-habit
     (add-to-list 'org-modules 'org-habit)
+    (add-to-list 'auto-mode-alist '("\\.svelte\\'" . web-mode))
     ;; Replace org-set-tags with org-set-tags-command in keybinding
     ;; TODO: when upgrading spacemacs, check that this is still necessary.
     (spacemacs/set-leader-keys-for-major-mode 'org-mode ":" 'org-set-tags-command)
