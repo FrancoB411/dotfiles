@@ -19,6 +19,8 @@ endif
 
 " VIM-PLUG
 call plug#begin('~/.vim/plugged')
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'Olical/vim-enmasse'
   Plug 'tpope/vim-sensible'
   Plug 'junegunn/vim-easy-align'
   Plug 'bling/vim-airline'
@@ -81,7 +83,7 @@ let g:elm_format_autosave = 1
 nnoremap <F5> :GundoToggle<CR>
 
 " use comma as leader key
-let mapleader=","
+let mapleader=" "
 
 " show line numbers
 set nu
@@ -102,7 +104,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 " VIMCASTS...
 set ts=2 sts=2 sw=2 expandtab
 
-"source .vimrc with ,v
+"source .vimrc with <leader> v
 nnoremap <leader>v :source $MYVIMRC<CR>
 
 " run current test
@@ -174,7 +176,7 @@ set autoread
 
 " FUZZY FINDER
  
-" map ,t to FZF
+" map <learder>t to FZF
 :nnoremap <leader>t :FZF<CR>
 
 " Use silver-searcher 
@@ -186,7 +188,7 @@ set rtp+=/usr/local/opt/fzf
 " Have fzf use ag
 let $FZF_DEFAULT_COMMAND= 'ag -g ""'
 
-" map close quickfix to ,c
+" map close quickfix to <leader>c
 :nnoremap <leader>c :cclose<CR>
 
 command! -bang -complete=buffer -nargs=? Bd Bdelete<bang> <args>
@@ -195,8 +197,9 @@ let g:mustache_abbreviations = 1
 
 
 let g:UltiSnipsExpandTrigger="<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-f>"
+let g:UltiSnipsJumpForwardTrigger="<C-f>"
+let g:UltiSnipsJumpBackwardTrigger="<C-b>"
+let g:UltiSnipsListSnippets="<C-tab>"
 
 set clipboard=unnamed
 
